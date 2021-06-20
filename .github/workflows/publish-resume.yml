@@ -45,6 +45,5 @@ jobs:
       - run: |
           cd $GITHUB_WORKSPACE/json-resume
           export THEME_NO=1
-          ls -lart
-          resume export --format html --theme ./../jsonresume-theme-aurora index.html
+          resume export --format html --theme $GITHUB_WORKSPACE/jsonresume-theme-aurora index.html
           ls -lart
