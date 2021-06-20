@@ -41,6 +41,7 @@ jobs:
       - run: npm install -g resume-cli@3.0.0
       # Build jsonresume-theme-aurora
       - run: npm install -C $GITHUB_WORKSPACE/jsonresume-theme-aurora
+      - run: ls -lart $GITHUB_WORKSPACE
       - run: cd $GITHUB_WORKSPACE/resume
       - run: export THEME_NO=1
       # Export resume.json to index.html
