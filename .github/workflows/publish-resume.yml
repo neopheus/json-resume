@@ -27,7 +27,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
-          path: 'resume'
+          path: 'json-resume'
       - uses: actions/checkout@v2
         with:
           repository: 'saurabh73/jsonresume-theme-aurora'
@@ -41,8 +41,8 @@ jobs:
       - run: npm install -g resume-cli@3.0.0
       # Build jsonresume-theme-aurora
       - run: npm install -C $GITHUB_WORKSPACE/jsonresume-theme-aurora
-      - run: ls -lart $GITHUB_WORKSPACE
-      - run: cd $GITHUB_WORKSPACE/resume
+      - run: tree
+      - run: cd $GITHUB_WORKSPACE/json-resume
       - run: export THEME_NO=1
       # Export resume.json to index.html
       - run: resume export --format html --theme ./../jsonresume-theme-aurora index.html
