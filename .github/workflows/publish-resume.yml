@@ -30,6 +30,8 @@ jobs:
         uses: actions/setup-node@v2.1.5
         with: 
           node-version: 14.x
+      - run: npm install -g resume-cli@3.0.0
+      - run: resume validate
           
       # Runs a single command using the runners shell
       - name: Run a one-line script
