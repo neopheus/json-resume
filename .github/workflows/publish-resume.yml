@@ -35,6 +35,12 @@ jobs:
         uses: actions/setup-node@v2.1.5
         with: 
           node-version: 14.x
-      - run: cd ./jsonresume-theme-aurora && npm install && cd ./../
+      # Globally Install resume-cli
       - run: npm install -g resume-cli@3.0.0
-      - run: resume export --format html --theme ./jsonresume-theme-aurora index.html
+      # Build jsonresume-theme-aurora
+      - run: npm install -C $GITHUB_WORKSPACE/jsonresume-theme-aurora
+      # Install jsonresume-theme-aurora Globally
+      - run: npm install -g ./jsonresume-theme-aurora
+      - run: export THEME_NO=1
+      # Export resume.json to index.html
+      - run: resume export --format html --theme jsonresume-theme-aurora index.html
