@@ -18,7 +18,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  prepare:
+  build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -35,7 +35,4 @@ jobs:
         with: 
           node-version: 14.x
       - run: npm install -g resume-cli@3.0.0
-  build:
-     runs-on: ubuntu-latest
-     steps:
       - run: ls -lart $GITHUB_WORKSPACE
