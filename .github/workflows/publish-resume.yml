@@ -29,6 +29,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: 'saurabh73/jsonresume-theme-aurora'
+          path: '${GITHUB_WORKSPACE}/jsonresume-theme-aurora'
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
