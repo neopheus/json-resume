@@ -42,7 +42,7 @@ jobs:
       - name: Build Resume
         run: resume export --format html --theme "./jsonresume-theme-aurora" index.html
         env:
-          THEME_NO: 2
+          THEME_NO: 3
       
       - name: Archive Generated Resume
         uses: actions/upload-artifact@v2
