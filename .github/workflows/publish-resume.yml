@@ -60,7 +60,15 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: output
+      - name:  Install Chrome
+        uses: browser-actions/setup-chrome@latest
+      - run: chrome --version
           
       - name: Print index.html
-        run: |
-          cat index.html
+        run: chrome --headless --disable-gpu --print-to-pdf="saurabh-dutta.pdf" --no-margins --run-all-compositor-stages-before-draw index.html
+      
+      - name: Archive Generated Resume
+        uses: actions/upload-artifact@v2
+        with:
+          name: output
+          path: saurabh-dutta.pdf
