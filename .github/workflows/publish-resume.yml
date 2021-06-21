@@ -50,4 +50,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: output
-          path: $GITHUB_WORKSPACE/json-resume/index.html
+          path: json-resume/index.html
