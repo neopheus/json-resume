@@ -40,9 +40,7 @@ jobs:
         run: npm install -C $GITHUB_WORKSPACE/jsonresume-theme-aurora
 
       - name: Build Resume
-        run: resume export --format html --theme "./jsonresume-theme-aurora" index.html
-        env:
-          THEME_NO: $(date +'%w')
+        run: export THEME_NO=$(date +'%u') && resume export --format html --theme "./jsonresume-theme-aurora" index.html
       
       - name: Archive Generated Resume
         uses: actions/upload-artifact@v2
