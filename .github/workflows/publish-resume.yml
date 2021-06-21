@@ -46,3 +46,8 @@ jobs:
           cd json-resume
           export THEME_NO=2
           resume export --format html --theme "./../jsonresume-theme-aurora" index.html
+      - name: Archive Generated Resume
+        uses: actions/upload-artifact@v2
+        with:
+          name: output
+          path: $GITHUB_WORKSPACE/json-resume/index.html
