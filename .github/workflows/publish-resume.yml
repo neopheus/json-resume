@@ -51,3 +51,15 @@ jobs:
         with:
           name: output
           path: index.html
+  
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download index.html
+        uses: actions/download-artifact@v2
+        with:
+          name: output
+          
+      - name: Print index.html
+        run: |
+          cat index.html
