@@ -43,9 +43,6 @@ jobs:
       - run: npm install -C $GITHUB_WORKSPACE/jsonresume-theme-aurora
       # Export resume.json to index.html
       - run: |
-          echo "workspace ${GITHUB_WORKSPACE}"
           cd json-resume
-          ls -lart
-          export THEME_NO=1
+          export THEME_NO=2
           resume export --format html --theme "./../jsonresume-theme-aurora" index.html
-          ls -lart
