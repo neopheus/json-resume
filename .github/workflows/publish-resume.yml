@@ -54,6 +54,7 @@ jobs:
   
   print:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Download index.html
         uses: actions/download-artifact@v2
