@@ -30,9 +30,20 @@
   },
   "work": [
     {
+      "company": "Turing.com",
+      "position": "Software Developer",
+      "startDate": "2022-04-01",
+      "summary": "",
+      "website": "https://www.turing.com/",
+      "highlights": [
+        "Working with InvestCloud A-Tier team to manage their core application server layer used by many clients around the world for ther investment trading platform"
+      ]
+    },
+    {
       "company": "Wipro Limited",
       "position": "Technologist",
       "startDate": "2016-01-04",
+      "endDate": "2022-03-31",
       "summary": "",
       "website": "https://www.wipro.com/",
       "highlights": [
