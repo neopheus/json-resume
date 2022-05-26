@@ -49,9 +49,7 @@
       "highlights": [
         "Worked to develop the system for Capital One, to avoid being blacklisted by Spamhaus, with analyzing email bounce events.",
         "Involved in development & maintenance of the systems for credit card limit increase opt-ins and card account preferences.",
-        "Built a cross-platform mobile App with Ionic for a POC project which tags customers bank transactions.",
-        "Automated application testing strategy in CI/CD pipelines.",
-        "Built internal tools to boost team's productivity."
+        "Built a cross-platform mobile App with Ionic for a POC project which tags customers bank transactions."
       ]
     },
     {
