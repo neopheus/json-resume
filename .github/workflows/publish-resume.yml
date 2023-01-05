@@ -25,7 +25,7 @@ jobs:
       - name: Checkout theme jsonresume-theme-aurora
         uses: actions/checkout@v2
         with:
-          repository: 'saurabh73/jsonresume-theme-aurora'
+          repository: 'neopheus/jsonresume-theme-aurora'
           path: 'jsonresume-theme-aurora'
 
       - name: Setup Node.js environment
@@ -62,13 +62,13 @@ jobs:
       - run: chrome --version
           
       - name: Print index.html
-        run: chrome --headless --disable-gpu --print-to-pdf="saurabh-dutta.pdf" --no-margins --run-all-compositor-stages-before-draw index.html
+        run: chrome --headless --disable-gpu --print-to-pdf="neopheus.pdf" --no-margins --run-all-compositor-stages-before-draw index.html
       
       - name: Archive Generated Resume
         uses: actions/upload-artifact@v2
         with:
           name: output
-          path: saurabh-dutta.pdf
+          path: neopheus.pdf
           retention-days: 1
   
   upload:
@@ -79,7 +79,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: output
-      - name: Deploy to https://resume.saurabhdutta.dev/
+      - name: Deploy to https://inspiring-griffin-d24ffe.netlify.app/
         uses: nwtgck/actions-netlify@v1.1
         with:
           publish-dir: "./"
